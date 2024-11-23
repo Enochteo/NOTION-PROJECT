@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task   
+ Management</title>
+    <link   
+ rel="stylesheet" href="task.m.css">
+</head>
+<body>
+    <header>
+        </header>
+
+    <main>
+        <h1>Task Management</h1>
+
+        <form id="task-form">
+            <label for="task-name">Task Name:</label>
+            <input type="text" id="task-name" name="task-name">
+
+            <label for="task-description">Task Description:</label>   
+
+            <textarea id="task-description" name="task-description"></textarea>
+
+            <label for="due-date">Due   
+ Date:</label>
+            <input type="date" id="due-date" name="due-date">
+
+            <label for="priority">Priority:</label>
+            <select id="priority" name="priority">
+                <option value="low">Low</option>   
+
+                <option value="medium">Medium</option>
+                <option value="high">High</option>
+            </select>   
+
+
+            <button type="submit">Add Task</button>
+        </form>
+
+        <ul id="task-list">   
+
+            </ul>
+    </main>
+
+    <footer>
+        </footer>
+
+    <script src="task.management.js"></script>
+</body>
+</html>
