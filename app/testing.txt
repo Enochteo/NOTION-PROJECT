@@ -1,0 +1,11 @@
+               <!-- {% if current_user.is_authenticated %}
+                    <a class="nav-item nav-link" id="about" href="/">About</a>
+                    <a class="nav-item nav-link" id="time_management" href="/time_management">Time Management</a>
+                    <a class="nav-item nav-link" id="task_management" href="/task_management">Task Management</a>
+                    <a class="nav-item nav-link" id="ask_ai" href="/ask_ai">Ask AI</a>
+                    <a class="nav-item nav-link" id="logout" href="/logout">Logout</a>
+                {% else %}
+                    <a class="nav-item nav-link" id="about" href="/">About</a>
+                    <a class="nav-item nav-link" id="sign-Up" href="/sign_up">Sign Up</a>
+                    <a class="nav-item nav-link" id="login" href="/login">Login</a>
+                {% endif %} -->

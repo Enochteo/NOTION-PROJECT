@@ -29,13 +29,38 @@
             </button>
             <div class="collapse navbar-collapse" id="navbar">
               <div class="navbar-nav">
-                <a class="nav-item nav-link" id="About" href="/">About</a>
-                <a class="nav-item nav-link" id="time_management" href="/Time Management">Time Management</a>
-                <a class="nav-item nav-link" id="ask_ai" href="/Ask AI">Ask AI</a>
+                <a class="nav-item nav-link" id="about" href="/">About</a>
+                <a class="nav-item nav-link" id="time_management" href="/time_management">Time Management</a>
+                <a class="nav-item nav-link" id="task_management" href="/task_management">Task Management</a>
+                <a class="nav-item nav-link" id="ask_ai" href="/ask_ai">Ask AI</a>
                 <a class="nav-item nav-link" id="logout" href="/logout">Logout</a>
               </div>
             </div>
           </nav>
+
+          {% with messages = get_flashed_messages(with_categories=true) %}
+          {% if messages %}
+            {% for category, message in messages %}
+            {% if category == 'error' %}
+            <div class="alert alert-danger alter-dismissable fade show" role="alert">
+                {{ message }}
+                <button type="button" class="close" data-dismiss="alert">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            {% else %}
+            <div class="alert alert-success alter-dismissable fade show" role="alert">
+                {{ message }}
+                <button type="button" class="close" data-dismiss="alert">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            {% endif %}
+            {% endfor %}
+
+          {% endif %}
+          {% endwith %}
+
           <div class ="container">
             {% block content %}
             {% endblock %}
